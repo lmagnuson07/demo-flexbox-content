@@ -26,7 +26,7 @@ li {
 
 .d {
     background-color: #3cb371;
-    /* font-size: 72px; */
+    font-size: 72px;
 }
 
 .e {
@@ -35,4 +35,26 @@ li {
 
 .f {
     background-color: #9370db;
+}
+
+/* flexbox responds to the content and their natural width first, then it distributes the left over space on the row */
+/* Flex items are the width of the content inside of them */
+ul.flex {
+    display: flex;
+
+    /* Justify-content deals with left over space on the main axis of the row (horizontal) */
+    justify-content: flex-start; /* default property */
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    /* ALign-items distributes space on the cross axis (vertical). The tallest item defines the height for the whole row and by default, all other items will stretch to fit. */
+    align-items: stretch; /* default property */
+    align-items: flex-start;
+    align-items: end;
+    align-items: center;
+    align-items: baseline;
+
+    /* Shorthand property that you can use for both justify-content and align-items  */
+    place-items: baseline center;
 }
